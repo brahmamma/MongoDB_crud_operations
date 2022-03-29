@@ -1,0 +1,38 @@
+htnl 
+    head
+        style.
+               td button a(
+                    text-decoration:none;
+                )
+                
+                
+    body
+        a(href="/addunicorn.html") Add Unicorn 
+        br
+        br
+        table(border=2)
+            thead
+                th Name 
+                th DOB
+                th Loves 
+                th Weight
+                th Gender
+                th Vampires
+                th(colspan=2) operations
+
+            tbody 
+                each unicorn in unicorns 
+                    tr 
+                        td=unicorn.name 
+                        td=unicorn.dob
+                        td=unicorn.loves
+                        td=unicorn.weight
+                        td=unicorn.gender
+                        td=unicorn.vampires
+                        td 
+                            a(href="unicornedit/"+unicorn._id) 
+                                button Edit
+                            
+                        td 
+                            a(href="unicorndelete/"+unicorn._id) 
+                                button DELETE 

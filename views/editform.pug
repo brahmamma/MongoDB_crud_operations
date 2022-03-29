@@ -1,0 +1,29 @@
+html        
+    head        
+    body    
+        form(action="/update/"+unicorn._id method="post" name="update")
+            label Name: 
+            input(type="text"  value=unicorn.name name="name")
+            br
+            br
+            label DOB:
+            input(type="datetime-local"  value=unicorn.dob name="dob")
+            br
+            br
+            label Loves:
+            input(type="text"  value=unicorn.loves.toString() name="loves")
+            br
+            br
+            label Weight:
+            input(type="text"  value=unicorn.weight name="weight")
+            br
+            br
+            label Gender:
+            input(type="text"  value=unicorn.gender name="gender")
+            br
+            br
+            label Vampires:
+            input(type="text" value=unicorn.vampires name="vampires")
+            br
+            br
+            button  Update
